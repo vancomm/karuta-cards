@@ -1,0 +1,50 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.card {
+  width: 53mm;
+  height: 74mm;
+  padding-top: 0.5rem;
+  display: flex;
+  justify-content: center;
+  border: 2.8mm solid #668811;
+  background-color: #fffdfd;
+  box-shadow: 2mm 2mm #333;
+}
+
+.poem {
+  font-family: serif;
+  display: grid;
+  grid-auto-flow: column;
+  gap: 0.3rem;
+}
+
+.col {
+  display: grid;
+  grid-auto-rows: 1em;
+  gap: 0.7em;
+  align-items: center;
+}
+
+.char {
+  writing-mode: vertical-lr;
+}
+
+.kanji {
+  
+}
+
+.kana {
+
+}
+
+.num {
+  text-combine-upright: all;
+  --webkit-text-combine: horizontal;
+  font-size: 0.7em;
+  display: grid;
+  place-items: center;
+}

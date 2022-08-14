@@ -1,0 +1,9 @@
+.mat {
+  box-sizing: border-box;
+  padding: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  border: 10px solid #837451;
+  background-color: #dbc280;
+}
