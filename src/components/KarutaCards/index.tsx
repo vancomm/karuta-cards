@@ -1,14 +1,23 @@
 import KarutaCard from "./KarutaCard";
-import * as poemsObj from "./poems";
 import styles from "./KarutaCards.module.css";
+import cardsJson from "../../data/cards.json";
+import { Poem } from "../../data/types";
+
+interface Card {
+  index: number;
+  poem: Poem;
+}
 
 export default function KarutaCards() {
-  const poems = Object.values(poemsObj);
+  const cards: Card[] = cardsJson;
+
   return (
     <div className={styles.mat}>
-      {poems.map((poem) => (
-        <KarutaCard poem={poem} />
-      ))}
+      {cards
+        .sort((a, b) => a.index - b.index)
+        .map(({ poem }, i) => (
+          <KarutaCard key={i} poem={poem} />
+        ))}
     </div>
   );
 }

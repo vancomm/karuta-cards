@@ -1,27 +1,20 @@
 /* eslint-disable react/no-array-index-key */
 import cn from "classnames";
-import { Char, isKana, isKanji, isNum, Poem } from "./types";
+import { Char, isSym, isNum, Poem } from "../../../data/types";
 import styles from "./KarutaCard.module.css";
 
 function renderChar(char: Char, i?: number) {
-  if (isKanji(char)) {
+  if (isSym(char)) {
     return (
-      <div key={`char-${i}`} className={cn(styles.char, styles.kanji)}>
+      <div key={`char-${i}`} className={cn(styles.char, styles.jp)}>
         <ruby>
-          {char.kanji}
-          <rt>{char.furigana}</rt>
+          {char.sym}
+          {char.furigana && <rt>{char.furigana}</rt>}
         </ruby>
       </div>
     );
   }
 
-  if (isKana(char)) {
-    return (
-      <div key={`char-${i}`} className={cn(styles.char, styles.kana)}>
-        <span>{char.kana}</span>
-      </div>
-    );
-  }
   if (isNum(char)) {
     return (
       <div key={`char-${i}`} className={cn(styles.char, styles.num)}>

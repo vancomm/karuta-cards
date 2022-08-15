@@ -1,0 +1,82 @@
+{
+    "cells": [
+        {
+            "language": "javascript",
+            "source": [
+                "function f(str) {\n  return `[\\n${str\n    .trim()\n    .replace(/\\n+/gm, \"\\n\")\n    .split(\"\\n\")\n    .map(\n      (line) =>\n        `\\t[\\n${line\n          .split(\"\")\n          .map((char) => `\\t\\tsym(\"${char}\")`)\n          .join(`,\\n`)}\\n\\t]`\n    )\n    .join(`,\\n`)}\\n]`;\n}"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "const x = `\n順徳院御製\n\n百敷や\n古き軒端の\nしのぶにも\n\n\nなほあまりある\nむかしなりけり `"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "console.log(f(x))"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "[",
+                                "\t[",
+                                "\t\tsym(\"順\"),",
+                                "\t\tsym(\"徳\"),",
+                                "\t\tsym(\"院\"),",
+                                "\t\tsym(\"御\"),",
+                                "\t\tsym(\"製\")",
+                                "\t],",
+                                "\t[",
+                                "\t\tsym(\"百\"),",
+                                "\t\tsym(\"敷\"),",
+                                "\t\tsym(\"や\")",
+                                "\t],",
+                                "\t[",
+                                "\t\tsym(\"古\"),",
+                                "\t\tsym(\"き\"),",
+                                "\t\tsym(\"軒\"),",
+                                "\t\tsym(\"端\"),",
+                                "\t\tsym(\"の\")",
+                                "\t],",
+                                "\t[",
+                                "\t\tsym(\"し\"),",
+                                "\t\tsym(\"の\"),",
+                                "\t\tsym(\"ぶ\"),",
+                                "\t\tsym(\"に\"),",
+                                "\t\tsym(\"も\")",
+                                "\t],",
+                                "\t[",
+                                "\t\tsym(\"な\"),",
+                                "\t\tsym(\"ほ\"),",
+                                "\t\tsym(\"あ\"),",
+                                "\t\tsym(\"ま\"),",
+                                "\t\tsym(\"り\"),",
+                                "\t\tsym(\"あ\"),",
+                                "\t\tsym(\"る\")",
+                                "\t],",
+                                "\t[",
+                                "\t\tsym(\"む\"),",
+                                "\t\tsym(\"か\"),",
+                                "\t\tsym(\"し\"),",
+                                "\t\tsym(\"な\"),",
+                                "\t\tsym(\"り\"),",
+                                "\t\tsym(\"け\"),",
+                                "\t\tsym(\"り\")",
+                                "\t]",
+                                "]",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
