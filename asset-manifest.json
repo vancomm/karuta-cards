@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/karuta-cards/static/css/main.eab3adae.css",
-    "main.js": "/karuta-cards/static/js/main.68f7b398.js",
+    "main.css": "/karuta-cards/static/css/main.a78d97bf.css",
+    "main.js": "/karuta-cards/static/js/main.653adb56.js",
     "static/js/787.c68453d2.chunk.js": "/karuta-cards/static/js/787.c68453d2.chunk.js",
     "index.html": "/karuta-cards/index.html",
-    "main.eab3adae.css.map": "/karuta-cards/static/css/main.eab3adae.css.map",
-    "main.68f7b398.js.map": "/karuta-cards/static/js/main.68f7b398.js.map",
+    "main.a78d97bf.css.map": "/karuta-cards/static/css/main.a78d97bf.css.map",
+    "main.653adb56.js.map": "/karuta-cards/static/js/main.653adb56.js.map",
     "787.c68453d2.chunk.js.map": "/karuta-cards/static/js/787.c68453d2.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.eab3adae.css",
-    "static/js/main.68f7b398.js"
+    "static/css/main.a78d97bf.css",
+    "static/js/main.653adb56.js"
   ]
 }
